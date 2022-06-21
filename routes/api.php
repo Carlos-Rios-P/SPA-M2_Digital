@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\CityController;
-use App\Http\Controllers\GroupController;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,3 +20,6 @@ Route::apiResource('city', \App\Http\Controllers\CityController::class)->except(
 
 Route::apiResource('group.campaign', \App\Http\Controllers\CampaignController::class)->only('store');
 Route::apiResource('/campaign', \App\Http\Controllers\CampaignController::class)->except('store');
+
+Route::apiResource('campaign.product', \App\Http\Controllers\ProductController::class)->only('store');
+Route::apiResource('product', \App\Http\Controllers\ProductController::class)->except('store');

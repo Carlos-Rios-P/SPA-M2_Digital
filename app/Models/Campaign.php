@@ -18,4 +18,9 @@ class Campaign extends Model
     {
         return $this->belongsTo(Group::class);
     }
+
+    public function product()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
