@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CityController;
 use App\Http\Controllers\GroupController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -16,3 +17,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::apiResource('/group', \App\Http\Controllers\GroupController::class);
+
+Route::apiResource('group.city', \App\Http\Controllers\CityController::class)->only('store');
+Route::apiResource('city', \App\Http\Controllers\CityController::class)->except('store');
