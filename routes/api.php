@@ -20,3 +20,6 @@ Route::apiResource('/group', \App\Http\Controllers\GroupController::class);
 
 Route::apiResource('group.city', \App\Http\Controllers\CityController::class)->only('store');
 Route::apiResource('city', \App\Http\Controllers\CityController::class)->except('store');
+
+Route::apiResource('group.campaign', \App\Http\Controllers\CampaignController::class)->only('store');
+Route::apiResource('/campaign', \App\Http\Controllers\CampaignController::class)->except('store');

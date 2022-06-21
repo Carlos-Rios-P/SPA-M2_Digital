@@ -17,4 +17,9 @@ class Group extends Model
     {
         return $this->hasMany(City::class);
     }
+
+    public function campaign()
+    {
+        return $this->hasOne(Campaign::class);
+    }
 }
