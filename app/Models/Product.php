@@ -20,4 +20,9 @@ class Product extends Model
     {
         return $this->belongsTo(Campaign::class);
     }
+
+    public function discount()
+    {
+        return $this->hasOne(Discount::class);
+    }
 }

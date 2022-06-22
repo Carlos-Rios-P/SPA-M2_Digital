@@ -23,3 +23,6 @@ Route::apiResource('/campaign', \App\Http\Controllers\CampaignController::class)
 
 Route::apiResource('campaign.product', \App\Http\Controllers\ProductController::class)->only('store');
 Route::apiResource('product', \App\Http\Controllers\ProductController::class)->except('store');
+
+Route::apiResource('product.discount', \App\Http\Controllers\DiscountController::class)->only('store');
+Route::apiResource('discount', \App\Http\Controllers\DiscountController::class)->except('store');
